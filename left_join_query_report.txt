@@ -1,0 +1,18 @@
+127.0.0.1/db_join/		http://localhost/phpmyadmin/index.php?route=/database/sql&db=db_join
+
+   Showing rows 0 -  5 (6 total, Query took 0.0012 seconds.)
+
+
+SELECT users.name AS user_name, categories.name AS category_name, products.name AS product_name
+FROM products
+LEFT JOIN categories ON products.category_id = categories.id
+LEFT JOIN users ON products.user_id = users.id;
+
+
+user_name	category_name	product_name	
+User 1	Category 1	Product 1	
+User 2	Category 1	Product 2	
+User 1	Category 2	Product 3	
+User 3	Category 2	Product 4	
+User 1	Category 3	Product 5	
+User 2	Category 1	Product 6	
